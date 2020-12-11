@@ -1,0 +1,14 @@
+.calculatrice input[type='text'],  .calculatrice select {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.calculatrice label::after {
+    content: ' : ';
+}
+
+.calculatrice input[type='text'].result {
+    margin-left: 15px;
+    width: 150px;
+    background-color: lightyellow;
+}
