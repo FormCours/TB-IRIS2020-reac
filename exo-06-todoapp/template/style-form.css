@@ -1,0 +1,40 @@
+.taskForm {
+    width: 500px;
+}
+
+.taskForm label {
+    display: inline-block;
+    width: 90px;
+    vertical-align: top;
+}
+.taskForm label::after {
+    content: ' : ';
+}
+
+.taskForm > div {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.taskForm > div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.taskForm input[type="text"], .taskForm textarea {
+    padding: 5px;
+    flex-grow: 1;
+    font-family: inherit; 
+    font-size: 1rem;
+}
+
+.taskForm textarea {
+    height: 2.4rem;
+    resize: none;
+}
+
+.taskForm input[type="submit"] {
+    margin-left: auto;
+}

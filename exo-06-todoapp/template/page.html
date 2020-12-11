@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-form.css">
+    <link rel="stylesheet" href="style-list.css">
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form class='taskForm'>
+        <div>
+            <label for="name">Nom</label>
+            <input id="name" type="text">
+        </div>
+        <div>
+            <label for="desc">Description</label>
+            <textarea id="desc"></textarea>
+        </div>
+        <div>
+            <label for="priority">Priorité</label>
+            <select id="priority" >
+                <option>Basse</option>
+                <option>Normal</option>
+                <option>Urgent</option>
+            </select>
+            <input type="submit" value="Ajouter">
+        </div>
+    </form>
+
+    <h1>Liste</h1>
+    <ul class="taskList">
+        <li class="task urgent">
+            <div>
+                <p class="taskTitle">Archeter du café</p>
+            </div>
+            <div class="taskButton">
+                <button>Terminer</button>
+                <button>Supprimer</button>
+            </div>
+        </li>
+        <li class="task">
+            <div>
+                <p class="taskTitle">Réaliser l'exercice</p>
+                <p>Créer l'application « Todo List »</p>
+            </div>
+            <div class="taskButton">
+                <button>Terminer</button>
+                <button>Supprimer</button>
+            </div>
+        </li>
+        <li class="task finish urgent">
+            <div>
+                <p class="taskTitle">Lorem</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quas deserunt maxime repudiandae.</p>
+            </div>
+            <div class="taskButton">
+                <button disabled>Terminer</button>
+                <button>Supprimer</button>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
