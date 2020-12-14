@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 class SearchBar extends Component {
@@ -8,7 +8,10 @@ class SearchBar extends Component {
         this.state = {
             search: ''
         };
-    }
+
+        // Utilisation des refs pour "manipuler" l'input
+        this.searchInput = createRef();
+    } 
 
     handleSearch = (e) => {
         this.setState({
@@ -19,11 +22,18 @@ class SearchBar extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        this.props.onSearch(this.state.search);
+        if(!this.state.search) {
+            return
+        }
+
+        this.props.onSearch(this.state.search.trim());
 
         this.setState({
             search: ''
         });
+
+        //Utilisation de la ref pour activé le focus sur l'input
+        this.searchInput.current.focus();
     }
 
     render() {
@@ -32,8 +42,10 @@ class SearchBar extends Component {
 
         return (
             <form onSubmit={this.handleSubmit}>
-                <input placeholder={placeholder} type="text" value={search} onChange={this.handleSearch}/>
-                <input type="submit" value={submitText}/>
+                <input placeholder={placeholder} type="text" 
+                    ref={this.searchInput}
+                    value={search} onChange={this.handleSearch}/>
+                <input type="submit" value={submitText} disabled={!search}/>
             </form>
         );
     }
