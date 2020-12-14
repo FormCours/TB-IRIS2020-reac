@@ -1,0 +1,9 @@
+.country h3 {
+    text-transform: uppercase;
+}
+
+.country img {
+    object-fit: contain;
+    max-width: 150px;
+    max-height: 150px;
+}

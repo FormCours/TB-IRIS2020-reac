@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import axios from 'axios';
 
+import style from './country.module.css';
+
 const CountryDisplay = (props) => {
     const {country, population, flag} = props;
     return (
-        <>
+        <div className={style.country}>
             <h3>{country}</h3>
             <p>Population: {population}</p>
             <img src={flag} alt={`Flag of ${country}`} />
-        </>
+        </div>
     );
 }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {nanoid} from 'nanoid';
 import CountryAjax from '../../components/country-ajax/country-ajax';
 import SearchBar from '../../components/seach-bar/search-bar';
 
@@ -14,14 +15,14 @@ class CountryApp extends Component {
 
     handleSearch = (code) => {
         this.setState((s) => ({
-            codes: [...s.codes, code]
+            codes: [{key:nanoid(), code}, ...s.codes]
         }));
     }
 
 
     render() {
         const countries = this.state.codes.map(
-            (c, index) => <CountryAjax key={index} code={c} />
+            c => <CountryAjax key={c.key} code={c.code} />
         )
 
         return (
