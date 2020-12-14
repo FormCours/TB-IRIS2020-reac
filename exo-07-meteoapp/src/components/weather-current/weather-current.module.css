@@ -1,0 +1,29 @@
+.current {
+    width: 300px;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 50px auto;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.data {
+    padding-left: 20px;
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+.savebtn {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 5px;
+}
+
+.savebtn::after {
+    content: '\1f4be';
+    font-size: 2.5rem;
+
+}

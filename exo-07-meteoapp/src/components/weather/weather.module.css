@@ -1,0 +1,21 @@
+.weahter * {
+    margin: 0px;
+}
+
+.weahter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.info {
+
+}
+
+.icon {
+    padding-left: 20px;
+    height: 50px;
+    width: 50px;
+    object-fit: none;
+    align-self: center;
+}
